@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Row, Col } from 'react-bootstrap'
+import { connect } from 'react-redux'
+import searchVideo from '../actions'
 
 const MainTitle = styled.h1`
     display: inline-block;
@@ -68,6 +70,11 @@ const Button = styled.button`
     font-weight: 600;
 `
 
+function handleChange (e) {
+    console.log(e.target.value)
+}
+
+
 
 
 function Search () {
@@ -86,14 +93,27 @@ function Search () {
                 </Row>
             </TitleBox>
             <SearchBox>
-                <Input onChange={() => alert("change")} placeholder='o que você quer assitir?' type="search" name="search" />
+                <Input placeholder='o que você quer assitir?' type="search" name="search"
+                    onChange={e => handleChange(e)} />
                 <Button onClick={() => alert('@TODO search submit')}> Buscar </Button>
             </SearchBox>
         </SearchContainer>
     )
 }
 
-export default Search
+function mapStateToProps (state) {
+    return {
+        query: state.query
+    }
+}
+
+function mapDispatchToProps (dispatch) {
+    return {
+        handleChange: function (query) {dispatch(searchVideo(query))}
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search)
 
 
 

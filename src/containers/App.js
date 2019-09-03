@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { connect } from 'react-redux'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
@@ -23,4 +24,10 @@ function App () {
     )
 }
 
-export default App
+function mapStateToProps (state) {
+    return {
+        query: state.query
+    }
+}
+
+export default connect(mapStateToProps)(App)
