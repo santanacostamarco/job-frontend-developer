@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Intelipost: Teste prático para Frontend Javascript Developer
 
 Este é o teste usado por nós aqui da [Intelipost](http://www.intelipost.com.br) para avaliar tecnicamente os candidatos a nossas vagas de Frontend. Se você estiver participando de um processo seletivo para nossa equipe, certamente em algum momento receberá este link, mas caso você tenha chego aqui "por acaso", sinta-se convidado a desenvolver nosso teste e enviar uma mensagem para nós no e-mail `techtests@intelipost.com.br`. 
@@ -64,3 +65,6 @@ Você pode gerar suas próprias API Keys para consumir as APIs, mas se quiser us
 * Alcance dos objetivos propostos
 * Adaptação mobile (layout responsivo)
 * Componentização e extensibilidade dos componentes Javascript
+=======
+#Busca de vídeos no Youtube e Ticketmaster
+>>>>>>> 3b9c15f9950742bc2ec861ff57f94314e8f89651
