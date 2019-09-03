@@ -1,27 +1,25 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Button = styled.div`
-  background: transparent;
-  border-radius: 3px;
-  border: 2px solid palevioletred;
-  color: palevioletred;
-  margin: 0 1em;
-  padding: 0.25em 1em;
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'
+
+// Containers
+import Search from './Search'
+
+
+const Wrapper = styled.div`
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(#50085d,#420210);
 `
 
-const Title = styled.h1`
-    color: #f00;
-    font-size: 26px;
-    font-family: sans-serif;
-    text-transform: uppercase;
-`
 
 function App () {
     return(
-        <Title>
-            Seu Tubo
-        </Title>
+        <Wrapper>
+            <Search />
+        </Wrapper>
     )
 }
 
